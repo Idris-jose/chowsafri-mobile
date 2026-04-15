@@ -1,10 +1,10 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import '../data/dummy_data.dart';
-import '../widgets/category_card.dart';
-import '../widgets/header.dart';
-import '../widgets/bottom_nav.dart';
-import '../widgets/custom_nav_bar.dart';
+import '../widgets/food/category_card.dart';
+import '../widgets/common/header.dart';
+import '../widgets/navigation/bottom_nav.dart';
+import '../widgets/navigation/custom_nav_bar.dart';
 import 'category_screen.dart';
 
 class HomeScreen extends StatefulWidget {

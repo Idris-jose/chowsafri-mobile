@@ -1,8 +1,8 @@
 import 'package:chowsafari_mobile/models/food_item.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-import '../widgets/custom_toast.dart';
-import '../widgets/food_image_carousel.dart';
+import '../widgets/common/custom_toast.dart';
+import '../widgets/common/image_carousel.dart';
 
 class FoodDetailScreen extends StatefulWidget {
   final FoodItem item;

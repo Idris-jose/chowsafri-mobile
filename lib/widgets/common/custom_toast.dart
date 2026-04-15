@@ -16,7 +16,7 @@ class CustomToast {
       top: MediaQuery.of(context).padding.top + 20,
       left: 0,
       right: 0,
-      child: Center( // 👈 centers it horizontally
+      child: Center( 
         child: Material(
           color: Colors.transparent,
           child: Container(
@@ -26,7 +26,7 @@ class CustomToast {
               borderRadius: BorderRadius.circular(30),
             ),
             child: Row(
-              mainAxisSize: MainAxisSize.min, // 👈 wraps content width
+              mainAxisSize: MainAxisSize.min, 
               children: [
                 // Darker circle behind icon
                 Container(
