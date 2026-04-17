@@ -6,6 +6,7 @@ import '../widgets/common/header.dart';
 import '../widgets/navigation/bottom_nav.dart';
 import '../widgets/navigation/custom_nav_bar.dart';
 import 'category_screen.dart';
+import 'spot_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -20,7 +21,10 @@ class _HomeScreenState extends State<HomeScreen> {
   //
   late final List<Widget> _pages = [
     _buildHomeContent(), // your current UI
-    const Center(child: Text("Category Page")), // or another screen
+    const SpotScreen(),
+    const Center(child: Text("Activity Page")),
+    const Center(child: Text("Order Page")),
+    const Center(child: Text("Profile Page")),
   ];
 
   void _onNavTap(int index) {

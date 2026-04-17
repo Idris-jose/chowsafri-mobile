@@ -24,21 +24,21 @@ class AppBottomNav extends StatelessWidget {
       type: BottomNavigationBarType.fixed,
       items: const [
         BottomNavigationBarItem(
-          icon: Icon(Icons.location_on), 
-          label: 'Spot'
-          ),
-        BottomNavigationBarItem(
-          icon: Icon(Icons.history), 
-          label: 'Activity'
-          ),
-        BottomNavigationBarItem(
           icon: Icon(Icons.restaurant_menu),
           label: 'Menu',
         ),
         BottomNavigationBarItem(
+          icon: Icon(Icons.location_on), 
+          label: 'Spot',
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.history), 
+          label: 'Activity',
+        ),
+        BottomNavigationBarItem(
           icon: Icon(Icons.receipt),
-          label: 'Order'
-          ),
+          label: 'Order',
+        ),
         BottomNavigationBarItem(
           icon: Icon(Icons.account_circle),
           label: 'Profile',

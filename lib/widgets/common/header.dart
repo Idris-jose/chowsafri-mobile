@@ -4,12 +4,14 @@ class AppHeader extends StatelessWidget {
   final String title;
   final String? subtitle;
   final bool showBack;
+  final bool showWelcome;
 
   const AppHeader({
     super.key,
     required this.title,
     this.subtitle,
     this.showBack = false,
+    this.showWelcome = true,
   });
 
   @override
@@ -26,15 +28,17 @@ class AppHeader extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    "Welcome to",
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 14,
-                      fontWeight: FontWeight.bold,
+                  if (showWelcome) ...[
+                    const Text(
+                      "Welcome to",
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 14,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
-                  ),
-                  SizedBox(height: 4),
+                    const SizedBox(height: 4),
+                  ],
                   Text(
                     title,
                     style: const TextStyle(

@@ -44,8 +44,17 @@ class CategoryScreen extends StatelessWidget {
                   isScrollControlled: true,
                   backgroundColor: Colors.transparent,
                   builder: (context) {
-                    return SingleChildScrollView(
-                      child: FoodDetailScreen(item: item),
+                    return DraggableScrollableSheet(
+                      initialChildSize: 0.85,
+                      minChildSize: 0.5,
+                      maxChildSize: 0.85,
+                      expand: false,
+                      builder: (context, scrollController) {
+                        return SingleChildScrollView(
+                          controller: scrollController,
+                          child: FoodDetailScreen(item: item),
+                        );
+                      },
                     );
                   },
                 );
