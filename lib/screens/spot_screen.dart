@@ -21,7 +21,7 @@ class _SpotScreenState extends State<SpotScreen> {
     child: SingleChildScrollView(
       child: Column(
         children: [
-          CustomNavBar(showBack: true),
+          CustomNavBar(showBack: false),
           const SizedBox(height: 16),
           const AppHeader(
             title: "Spot",
@@ -30,7 +30,7 @@ class _SpotScreenState extends State<SpotScreen> {
           ),
           const SizedBox(height: 0),
 
-          const FilterBar(),       // your chips row
+          const FilterBar(),
 
           const SizedBox(height: 12),
 

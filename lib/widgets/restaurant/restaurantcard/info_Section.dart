@@ -16,29 +16,52 @@ class InfoSection extends StatelessWidget {
           /// Category
           const Text(
             "Restaurant",
-            style: TextStyle(color: Colors.grey, fontSize: 12),
+            style: TextStyle(color: Colors.grey, fontSize: 12,fontWeight: FontWeight.w500,),
           ),
 
           const SizedBox(height: 4),
 
           /// Name
-          Text(
+          Row(
+            children: [
+                Text(
             restaurant.name,
             style: const TextStyle(
-              fontSize: 16,
-              fontWeight: FontWeight.bold,
+              fontSize: 14,
+              fontWeight: FontWeight.w700,
             ),
           ),
+          const Spacer(),
+          Container(
+            padding: const EdgeInsets.all(6),
+            decoration: const BoxDecoration(
+              color: Color(0xFFF5F5F5),
+              shape: BoxShape.circle,
+            ),
+            child: const Icon(Icons.favorite_border, color: Color(0xFF7C7C7C), size: 18),
+          ),
+          const SizedBox(width: 8),
+          Container(
+            padding: const EdgeInsets.all(6),
+            decoration: const BoxDecoration(
+              color: Color(0xFFF5F5F5),
+              shape: BoxShape.circle,
+            ),
+            child: const Icon(Icons.share_outlined, color: Color(0xFF7C7C7C), size: 18),
+          ),
+            ],
+          ),
+          
 
           const SizedBox(height: 6),
 
           /// Rating row
           Row(
             children: [
-              Text("${restaurant.rating}"),
+              Text("${restaurant.rating}",style: TextStyle(color: Color(0xFF7C7C7C),fontSize: 10,fontWeight: FontWeight.w500),),
               const SizedBox(width: 4),
               Text("(${restaurant.reviews} ratings)",
-                  style: const TextStyle(color: Colors.grey)),
+                  style: const TextStyle(color: Color(0xFF7C7C7C),fontSize: 10,fontWeight: FontWeight.w500)),
 
               const SizedBox(width: 10),
 
@@ -53,8 +76,9 @@ class InfoSection extends StatelessWidget {
                 child: Text(
                   restaurant.isOpen ? "Open" : "Closed",
                   style: const TextStyle(
-                    color: Colors.green,
-                    fontSize: 12,
+                    color: Color(0xFF448A10),
+                    fontSize: 10,
+                    fontWeight: FontWeight.w500,
                   ),
                 ),
               ),
@@ -63,14 +87,14 @@ class InfoSection extends StatelessWidget {
 
               Text(
                 "Closes ${restaurant.closingTime}",
-                style: const TextStyle(color: Colors.grey, fontSize: 12),
+                style: const TextStyle(color: Color(0xFF7C7C7C), fontSize: 10,fontWeight: FontWeight.w500),
               ),
 
               const SizedBox(width: 6),
 
               Text(
                 restaurant.distance,
-                style: const TextStyle(color: Colors.grey, fontSize: 12),
+                style: const TextStyle(color: Color(0xFF7C7C7C), fontSize: 10,fontWeight: FontWeight.w500),
               ),
             ],
           ),

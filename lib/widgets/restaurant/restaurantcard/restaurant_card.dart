@@ -26,13 +26,16 @@ class RestaurantCard extends StatelessWidget {
           ),
         ],
       ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          ImageSection(imageUrl: restaurant.images[0]),
-          InfoSection(restaurant: restaurant),
-          const ActionSection(),
-        ],
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(16),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            ImageSection(imageUrls: restaurant.images),
+            InfoSection(restaurant: restaurant),
+            const ActionSection(),
+          ],
+        ),
       ),
     );
   }
