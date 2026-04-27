@@ -4,6 +4,7 @@ import '../widgets/common/filters/filter_bar.dart';
 import '../widgets/common/header.dart';
 import '../widgets/restaurant/restaurantcard/restaurant_card.dart';
 import '../data/restaurant_data.dart';
+import './explore_screen.dart';
 
 class SpotScreen extends StatefulWidget {
   const SpotScreen({super.key});
@@ -21,7 +22,39 @@ class _SpotScreenState extends State<SpotScreen> {
     child: SingleChildScrollView(
       child: Column(
         children: [
-          CustomNavBar(showBack: false),
+          AppBar(
+            backgroundColor: Colors.transparent,
+            elevation: 0,
+            actions: [
+              TextButton.icon(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => ExploreScreen(),
+                    ),
+                  );
+                },
+                icon: const Icon(Icons.search, color: Color(0xFF7C7C7C), size: 20),
+                label: const Text(
+                  'Explore',
+                  style: TextStyle(
+                    color: Color(0xFF7C7C7C),
+                    fontSize: 14,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+                style: TextButton.styleFrom(
+                  backgroundColor: Colors.white,
+                  padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                ),
+              ),
+              const SizedBox(width: 8),
+            ],
+          ),
           const SizedBox(height: 16),
           const AppHeader(
             title: "Spot",
